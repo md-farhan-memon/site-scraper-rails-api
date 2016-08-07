@@ -1,0 +1,1 @@
+json.h1_tags tags, :content

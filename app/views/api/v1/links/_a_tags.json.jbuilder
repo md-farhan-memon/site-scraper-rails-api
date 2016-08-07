@@ -1,0 +1,1 @@
+json.a_tags tags, :text, :value
