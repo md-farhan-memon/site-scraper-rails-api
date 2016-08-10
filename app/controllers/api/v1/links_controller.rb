@@ -27,10 +27,4 @@ class Api::V1::LinksController < ApplicationController
     render json: { errors: error.message }, status: 422
   end
 
-  private
-
-  def link_params
-    params.require(:link).permit(:url)
-  end
-
 end
