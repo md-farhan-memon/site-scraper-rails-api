@@ -62,6 +62,9 @@ If not added, response will be unauthorized - 401
 - - By default all tags and the link is returned
 - - if specific tags required pass the comma seperated tag names e.g. tags=h1,h3,a
 - - E.g. /api/v1/links/16?tags=h2
+- Possible responses:
+- - Success/200 with hashes of link and tags based on parameters passed/default response
+- - Unprocessable Entity/422 if there's some exception or error along with error message
 
 ## Configuration
 - Add other tags like H3-H6 if required in the config/initializers/constants.rb (Migrations need to be generated)
