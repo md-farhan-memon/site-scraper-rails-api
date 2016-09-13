@@ -11,6 +11,8 @@ This is a simple, quick Rails 5 API for site Scraping.
   - Paginated and Parameterized
   - Easily scalable
 
+You can test the APIs on this URL > https://site-scraper-api.herokuapp.com/
+
 ### Installation
 
 - Download/Clone, install the dependencies and run migration.
