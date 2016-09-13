@@ -1,0 +1,76 @@
+<!-- REFERENCE/CREDITS for the javascript - https://css-tricks.com/snippets/css/typewriter-effect -->
+  
+<body>
+  <div align="center">
+    <marquee direction=right behavior=alternate><img src="welcome.gif"/></marquee>
+    </br></br>
+    <img src="home.gif"/>
+    </br></br>
+    <div id="typedtext"></div>
+    </br>
+    <div id="github_link" style="visibility:hidden;">
+      <a target="_blank" href="https://github.com/md-farhan-memon/site-scraper-rails-api" title="GitHub - SiteScraper"><img src="gh-icon.png"/></a>
+      </br>
+      P.S. Ignore those fingers, just can't stop them. ;)
+      </br>
+      <a target="_blank" href="https://in.linkedin.com/in/mdfarhanmemon" title="LinkedIn Profile"><img src="li-icon.jpg"/></a>
+      <a target="_blank" href="https://www.facebook.com/mdfarhan.memon" title="Facebook Profile"><img src="fb-icon.jpg"/></a>
+    </div>
+  </div>
+</body>
+
+
+<style type="text/css">
+   body {
+    font-size:30px;
+    margin: 10px 50px;
+    font-weight: bold;
+  }
+</style>
+
+
+<script type="text/javascript">
+  setTimeout(function(){
+    document.getElementById('github_link').style.visibility = "visible";
+  },30000);
+
+  var aText = new Array(
+  "This is just a landing page for my hobby project - SiteScraper.", 
+  "It will help you scrape and organize data in H1, H2, H3 and Anchor tags from any website.",
+  "It serves as an API with JSON response to do the same.",
+  "To know the request, response formats and the source code visit the GitHub page provided below."
+  );
+  var iSpeed = 100; // time delay of print out
+  var iIndex = 0; // start printing array at this posision
+  var iArrLength = aText[0].length; // the length of the text array
+  var iScrollAt = 20; // start scrolling up at this many lines
+   
+  var iTextPos = 0; // initialise text position
+  var sContents = ''; // initialise contents variable
+  var iRow; // initialise current row
+   
+  function typewriter()
+  {
+    sContents =  ' ';
+    iRow = Math.max(0, iIndex-iScrollAt);
+    var destination = document.getElementById("typedtext");
+
+    while ( iRow < iIndex ) {
+      sContents += aText[iRow++] + '<br />';
+    }
+    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+    if ( iTextPos++ == iArrLength ) {
+      iTextPos = 0;
+      iIndex++;
+      if ( iIndex != aText.length ) {
+        iArrLength = aText[iIndex].length;
+      setTimeout("typewriter()", 300);
+      }
+    }
+    else {
+      setTimeout("typewriter()", iSpeed);
+    }
+  }
+
+  typewriter();
+</script>
