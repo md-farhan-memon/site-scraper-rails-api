@@ -12,6 +12,7 @@ This is a simple, quick Rails 5 API for site Scraping.
   - Easily scalable
 
 You can test the APIs on this URL > https://site-scraper-api.herokuapp.com/
+Postman Collection link download > https://www.getpostman.com/collections/9ab92841c1be51001d9b
 
 ### Installation
 
